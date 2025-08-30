@@ -5,16 +5,18 @@ def mathTableGenerator(number):
     print("\n")
 
 print("--- Welcome to mathTableGenerator ---")
+
 while True:
     user_input = input("Enter a number ('quit' to exit): ").strip()
-    if user_input == "quit":
+    if user_input.lower() == "quit":
         break
 
-    try:
-        user_input = int(user_input)
-    except ValueError:
-        print("Invalid input. Please enter an integer value.")
-        print("\n")
-        continue
+    else:
+        try:
+            user_input = int(user_input)
+        except ValueError:
+            print("Invalid input. Please enter an integer value.")
+            print("\n")
+            continue
 
-    mathTableGenerator(user_input)
+        mathTableGenerator(user_input)
